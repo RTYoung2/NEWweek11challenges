@@ -21,12 +21,13 @@ const budgetController = (() => {
     }
   }
 
-  const Income = (id, description, value) => {
-    this.id = id;
-    this.description = description;
-    this.value = value;
-  };
-
+  class Income {
+    constructor(id, description, value) {
+      this.id = id;
+      this.description = description;
+      this.value = value;
+    }
+  }
   const calculateTotal = (type) => {
     let sum = 0;
     data.allItems[type].forEach((cur) => {
